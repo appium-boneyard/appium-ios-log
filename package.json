@@ -6,7 +6,7 @@
     "ios",
     "logging"
   ],
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "appium",
   "license": "Apache-2.0",
   "repository": {
@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "appium-logger": "^1.1.7",
-    "appium-support": "^2.0.0-beta18",
+    "appium-support": "^2.0.0-beta21",
     "appium-xcode": "^2.1.0-beta",
     "asyncbox": "^2.2.0",
     "babel-runtime": "=5.6.16",
