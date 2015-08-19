@@ -26,10 +26,10 @@
   },
   "dependencies": {
     "appium-logger": "^1.1.7",
-    "appium-support": "2.0.0-beta21",
-    "appium-xcode": "^2.1.0-beta",
+    "appium-support": "beta",
+    "appium-xcode": "beta",
     "asyncbox": "^2.2.0",
-    "babel-runtime": "=5.6.16",
+    "babel-runtime": "=5.8.20",
     "bluebird": "^2.9.32",
     "date-utils": "^1.2.17",
     "glob": "^5.0.14",
@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "appium-gulp-plugins": "^1.2.12",
-    "appium-ios-simulator": "0.0.5",
+    "appium-ios-simulator": "latest",
     "chai": "^3.0.0",
     "chai-as-promised": "^5.1.0",
     "gulp": "^3.9.0",
