@@ -1,11 +1,10 @@
 // transpile:mocha
 
-import { IOSCrashLog } from '../..';
+import { IOSCrashLog } from '..';
 import { fs } from 'appium-support';
 import path from 'path';
 import chai from 'chai';
 import chaiAsPromised from 'chai-as-promised';
-import 'mochawait';
 
 
 chai.should();
