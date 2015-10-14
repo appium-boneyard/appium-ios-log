@@ -50,7 +50,7 @@ describe('performance logs', () => {
     let message = 'Some timeline event';
     onTimelineEventCb(message);
 
-    log.getLogs().should.eql([message]);
+    (await log.getLogs()).should.eql([message]);
   });
 
   it('should consume timeline events when logs are retrieved', async () => {
@@ -59,8 +59,8 @@ describe('performance logs', () => {
     let message = 'Some timeline event';
     onTimelineEventCb(message);
 
-    log.getLogs().should.eql([message]);
+    (await log.getLogs()).should.eql([message]);
 
-    log.getLogs().should.eql([]);
+    (await log.getLogs()).should.eql([]);
   });
 });
