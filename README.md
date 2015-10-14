@@ -1,5 +1,14 @@
 ## appium-ios-log
 
+[![NPM version](http://img.shields.io/npm/v/appium-ios-log.svg)](https://npmjs.org/package/appium-ios-log)
+[![Downloads](http://img.shields.io/npm/dm/appium-ios-log.svg)](https://npmjs.org/package/appium-ios-log)
+[![Dependency Status](https://david-dm.org/appium/appium-ios-log/master.svg)](https://david-dm.org/appium/appium-ios-log)
+[![devDependency Status](https://david-dm.org/appium/appium-ios-log/master/dev-status.svg)](https://david-dm.org/appium/appium-ios-log/master#info=devDependencies)
+
+[![Build Status](https://api.travis-ci.org/appium/appium-ios-log.png?branch=master)](https://travis-ci.org/appium/appium-ios-log)
+[![Coverage Status](https://coveralls.io/repos/appium/appium-ios-log/badge.svg?branch=master)](https://coveralls.io/r/appium/appium-ios-log?branch=master)
+
+
 Access to iOS system, crash, and performance logs.
 
 On real devices, realtime system log capture is through [libimobiledevice](http://www.libimobiledevice.org/)'s `idevicesyslog`. If this is not installed, the system falls back to [deviceconsole](https://github.com/rpetrich/deviceconsole), which is bundled with the Appium server.
