@@ -1,11 +1,10 @@
 // transpile:mocha
 
-import { IOSPerformanceLog } from '../..';
+import { IOSPerformanceLog } from '..';
 import sinon from 'sinon';
 import _ from 'lodash';
 import chai from 'chai';
 import chaiAsPromised from 'chai-as-promised';
-import 'mochawait';
 
 
 chai.should();

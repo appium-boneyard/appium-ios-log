@@ -1,6 +1,6 @@
 // transpile:mocha
 
-import { IOSLog } from '../..';
+import { IOSLog } from '..';
 import { getSimulator } from 'appium-ios-simulator';
 import sinon from 'sinon';
 import { fs } from 'appium-support';
@@ -8,7 +8,7 @@ import path from 'path';
 import logger from '../lib/logger';
 import chai from 'chai';
 import chaiAsPromised from 'chai-as-promised';
-import 'mochawait';
+import B from 'bluebird';
 
 
 chai.should();
@@ -31,7 +31,9 @@ describe('system logs', () => {
     await fs.copyFile(fixSystemLog, tmpSystemLog);
   });
   afterEach(async () => {
-    await fs.unlink(tmpSystemLog);
+    if (await fs.exists(tmpSystemLog)) {
+      await fs.unlink(tmpSystemLog);
+    }
   });
 
   it('should begin log capture', async function () {
@@ -43,6 +45,11 @@ describe('system logs', () => {
     let message = 'This is a test log line';
     await fs.writeFile(tmpSystemLog, `${message}\n`, {flag: 'a'});
 
+    // on some slow system (e.g., Travis) need a moment
+    await B.delay(500);
+
     spy.calledWith(`[IOS_SYSLOG_ROW] ${message}`).should.be.true;
+
+    await log.stopCapture();
   });
 });
