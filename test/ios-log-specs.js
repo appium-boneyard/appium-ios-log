@@ -1,7 +1,6 @@
 // transpile:mocha
 
 import { IOSLog } from '..';
-import { getSimulator } from 'appium-ios-simulator';
 import sinon from 'sinon';
 import { fs } from 'appium-support';
 import path from 'path';
@@ -21,7 +20,11 @@ describe('system logs', () => {
   let sim;
   beforeEach(async () => {
     // get the simulator, and stub what will be called
-    sim = await getSimulator('fake-udid');
+    sim = {
+      udid: 'fake-udid',
+      getLogDir: () => {},
+      getPlatformVersion: () => {}
+    };
     sinon.stub(sim, 'getLogDir').returns(LOG_DIR);
     sinon.stub(sim, 'getPlatformVersion').returns('8.4');
 
