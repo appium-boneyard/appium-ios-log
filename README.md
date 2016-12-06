@@ -8,6 +8,7 @@
 [![Build Status](https://api.travis-ci.org/appium/appium-ios-log.png?branch=master)](https://travis-ci.org/appium/appium-ios-log)
 [![Coverage Status](https://coveralls.io/repos/appium/appium-ios-log/badge.svg?branch=master)](https://coveralls.io/r/appium/appium-ios-log?branch=master)
 
+*Note*: Issue tracking for this repo has been disabled. Please use the [main Appium issue tracker](https://github.com/appium/appium/issues) instead.
 
 Access to iOS system, crash, and performance logs.
 
